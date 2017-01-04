@@ -1,3 +1,9 @@
 <h1>Test</h1>
 
+<% @articles.each do |article| %>
+  <h2><%= article.title %></h2>
+  <p><%= truncate(article.content, length: 100) %></p>
+  <p>Crée le: <%= article.created_at.strftime('%d %b, %y')%></p>
+<% end %>
+
   <%= link_to "New Article", new_article_path %>
