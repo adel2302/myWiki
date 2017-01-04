@@ -5,6 +5,3 @@
   <p><%= truncate(article.content, length: 100) %></p>
   <p>Crée le: <%= article.created_at.strftime('%d %b, %y')%></p>
 <% end %>
-<% if user_signed_in? %>
-  <%= link_to "New Article", new_article_path %>
-<% end %>
