@@ -17,6 +17,7 @@
         <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
             <%= link_to "New Article", new_article_path %>
+            <%= link_to "New Category", new_category_path %>
             <%= link_to "Déconnection", destroy_user_session_path, :method => :delete %>
           <% end %>
         </ul>
